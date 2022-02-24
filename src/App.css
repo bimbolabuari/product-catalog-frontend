@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.img {
+  width: 100%;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
+  height: 10vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.header p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.description {
+  color: #555;
+  font-size: 12px;
+  line-height: 18px;
+  padding-top: 4px;
+}
+
+.imgContainer {
+  width: 100%;
+}
+
+.title {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.bigContainer {
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+}
+
+.container {
+  padding: 10px;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+@media screen and (min-width: 540px) {
+  .container {
+    display: inline-block;
+    flex-basis: 49%;
+    max-width: 49%;
+    padding: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 828px) {
+  .container {
+    flex-basis: 32.33333333%;
+    max-width: 32.333333333%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    flex-basis: 25%;
+    max-width: 25%;
+    padding: 12px;
   }
 }
