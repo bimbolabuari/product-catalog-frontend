@@ -37,11 +37,14 @@ const PhoneListContainer = () => {
                   <img className="img" src={image} alt={title} />
                 </div>
                 <h2 className="title">{title}</h2>
-                <p className="description">{color}</p>
-                <p className="description">
-                  $
-                  {price}
-                </p>
+                <div className="flex">
+                  <p className="description">{color}</p>
+                  <p className="description">
+                    $
+                    {price}
+                  </p>
+                </div>
+
               </div>
             </Link>
           </div>

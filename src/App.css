@@ -58,8 +58,8 @@ a {
 
 .flex {
   display: flex;
-    justify-content: space-evenly;
-    margin-top: 5px;
+  justify-content: space-evenly;
+  margin-top: 5px;
 }
 
 .bigContainer {
