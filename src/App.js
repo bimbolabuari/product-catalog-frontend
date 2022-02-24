@@ -14,6 +14,7 @@ const App = () => (
     <Header />
     <Routes>
       <Route exact path="/phones" element={<PhoneListContainer />} />
+      <Route path="*" element={<PhoneListContainer />} />
       <Route path="/phone/:id" element={<PhoneDetailComponent />} />
     </Routes>
   </Router>
