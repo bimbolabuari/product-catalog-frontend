@@ -39,6 +39,7 @@ a {
   font-size: 12px;
   line-height: 18px;
   padding-top: 4px;
+  font-family: cursive;
 }
 
 .imgContainer {
@@ -54,6 +55,20 @@ a {
   line-height: 18px;
   margin-top: 5px;
   text-align: center;
+}
+
+.detailsContainer {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.back {
+  color: #aaa;
+  font-size: 24px;
+  font-family: cursive;
+  font-weight: 700;
 }
 
 .flex {
