@@ -21,39 +21,40 @@ const PhoneListContainer = () => {
     fetchPhones();
   }, []);
 
-  const phoneRender = phones.map((phone) => {
-    const {
-      id, image, price, color, title,
-    } = phone;
-    return (
-      <>
-        {isLoading ? (
-          <p>Please Wait ...</p>
-        ) : (
-          <div className="container" key={id}>
-            <Link to={`/phone/${id}`}>
-              <div className="section">
-                <div className="imgContainer">
-                  <img className="img" src={image} alt={title} />
+  const phoneRender = () => (
+    <>
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        phones.map((phone) => {
+          const {
+            id, image, price, color, title,
+          } = phone;
+          return (
+            <div className="container" key={id}>
+              <Link to={`/phone/${id}`}>
+                <div className="section">
+                  <div className="imgContainer">
+                    <img className="img" src={image} alt={title} />
+                  </div>
+                  <h2 className="title">{title}</h2>
+                  <div className="flex">
+                    <p className="description">{color}</p>
+                    <p className="description">
+                      $
+                      {price}
+                    </p>
+                  </div>
                 </div>
-                <h2 className="title">{title}</h2>
-                <div className="flex">
-                  <p className="description">{color}</p>
-                  <p className="description">
-                    $
-                    {price}
-                  </p>
-                </div>
+              </Link>
+            </div>
+          );
+        })
+      )}
+    </>
+  );
 
-              </div>
-            </Link>
-          </div>
-        )}
-      </>
-    );
-  });
-
-  return <>{phoneRender}</>;
+  return <>{phoneRender()}</>;
 };
 
 export default PhoneListContainer;
