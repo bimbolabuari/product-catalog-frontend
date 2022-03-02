@@ -19,7 +19,7 @@ a {
   width: 100%;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #eee;
   align-items: center;
   text-align: center;
   padding: 10px;
@@ -34,7 +34,8 @@ a {
   line-height: 22px;
 }
 
-.description {
+.description,
+.nav {
   color: #555;
   font-size: 12px;
   line-height: 18px;
@@ -43,25 +44,37 @@ a {
 }
 
 .imgContainer {
-  width: 80%;
+  width: 75%;
   height: 250px;
   margin: 0 auto;
+  max-width: 250px;
 }
 
 .title {
   color: #000;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 18px;
-  margin-top: 5px;
+  margin: 5px 0 15px;
   text-align: center;
 }
 
 .detailsContainer {
   width: 80%;
   max-width: 700px;
-  margin: 0 auto;
-  height: 100vh;
+  padding: 10px 0;
+  box-shadow: 1px 1px 25px #ddd;
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+.navlink {
+  text-align: center;
+  margin: 5px 0 15px;
+}
+
+.nav {
+  margin-top: 15px;
 }
 
 .back {
@@ -86,7 +99,11 @@ a {
 
 .container {
   padding: 10px 0;
-  width: 100%;
+  width: 90%;
+  height: 350px;
+  box-shadow: 1px 1px 25px #ddd;
+  margin: 20px auto;
+  border-radius: 2px;
 }
 
 .section {
@@ -96,28 +113,48 @@ a {
   position: relative;
 }
 
+.rightFlex {
+  padding: 7px;
+}
+
 @media screen and (min-width: 540px) {
   .container {
     display: inline-block;
     flex-basis: 49%;
-    height: 300px;
-    max-width: 49%;
-    padding: 10px;
+    max-width: 46%;
+    margin: 20px 10px;
   }
 }
 
 @media screen and (min-width: 828px) {
   .container {
-    height: 300px;
     flex-basis: 32.33333333%;
-    max-width: 32.333333333%;
+    max-width: 30.333333333%;
+  }
+
+  .detailsFlex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .imgFlex {
+    margin: 0 15px;
+  }
+
+  .descriptionFlex {
+    font-size: 20px;
+    font-family: serif;
+    line-height: 25px;
+  }
+
+  .rightFlex {
+    width: 70%;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .container {
     flex-basis: 25%;
-    max-width: 25%;
-    padding: 12px;
+    max-width: 23%;
   }
 }
