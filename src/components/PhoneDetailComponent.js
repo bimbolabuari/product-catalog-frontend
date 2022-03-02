@@ -11,22 +11,26 @@ const PhoneDetailComponent = () => {
   } = phone;
   return (
     <div className="detailsContainer">
-      <div>
+      <div className="navlink">
         <NavLink to="/phones" className="back">
-          <p>Go Back</p>
+          <p className="nav">Return to Home page</p>
         </NavLink>
       </div>
       <h2 className="title">{title}</h2>
-      <div className="imgContainer">
-        <img className="img" src={image} alt={title} />
-      </div>
-      <p className="description">{description}</p>
-      <div className="flex">
-        <p className="description">{color}</p>
-        <p className="description">
-          $
-          {price}
-        </p>
+      <div className="detailsFlex">
+        <div className="imgContainer imgFlex">
+          <img className="img" src={image} alt={title} />
+        </div>
+        <div className="rightFlex">
+          <p className="description descriptionFlex">{description}</p>
+          <div className="flex">
+            <p className="description descriptionFlex">{color}</p>
+            <p className="description descriptionFlex">
+              $
+              {price}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

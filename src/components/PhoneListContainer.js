@@ -22,7 +22,7 @@ const PhoneListContainer = () => {
   }, []);
 
   const phoneRender = () => (
-    <>
+    <div className="phoneListContainer">
       {isLoading ? (
         <p>Loading...</p>
       ) : (
@@ -51,7 +51,7 @@ const PhoneListContainer = () => {
           );
         })
       )}
-    </>
+    </div>
   );
 
   return <>{phoneRender()}</>;
