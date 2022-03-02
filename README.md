@@ -2,6 +2,8 @@
 
 > A simple product catalog app that returns a couple of mobile phones like iPhone 7, Samsung Galaxy S7 etc. with some simple attributes like product image, title, price, description and color.
 
+ ![Screenshot](./Screenshot.png)
+
 ## Technologies Used and Requirements
 
 - React Redux
@@ -36,7 +38,6 @@ $ npm run build # Builds the app for production to the `build` folder.
 ## Netlify Deploy link
 
 - [Netlify](https://product-catalog-frontend.netlify.app)
-
 
 
 ## 👤 Author
